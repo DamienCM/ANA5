@@ -1,42 +1,21 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Academic Title Page
-% LaTeX Template
-% Version 2.0 (17/7/17)
-%
-% This template was downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% WikiBooks (LaTeX - Title Creation) with modifications by:
-% Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-% 
-% Instructions for using this template:
-% This title page is capable of being compiled as is. This is not useful for 
-% including it in another document. To do this, you have two options: 
-%
-% 1) Copy/paste everything between \begin{document} and \end{document} 
-% starting at \begin{titlepage} and paste this into another LaTeX file where you 
-% want your title page.
-% OR
-% 2) Remove everything outside the \begin{titlepage} and \end{titlepage}, rename
-% this file and move it to the same directory as the LaTeX file you wish to add it to. 
-% Then add \input{./<new filename>.tex} to your LaTeX file where you want your
-% title page.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{mathpazo} % Palatino font
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\addto\captionsfrench{\renewcommand{\chaptername}{Cas}}
 
 \begin{document}
 
@@ -115,6 +94,73 @@
 \end{titlepage}
 
 %----------------------------------------------------------------------------------------
+\tableofcontents
+\part{Fonctions de plusieurs variables}
+
+\chapter{Cas du triangle}
+\section{Question 1}
+Comme indiqué sur la question, on peut utiliser la formule de Héron pour calculer l'aire d'un triangle.
+Pour ce faire, il suffit d'avoir le périmètre du triangle.\\
+\indent Soit P le périmètre et A l'aire d'un triangle dont les côtés ont pour mesures a, b et c. Posons alors\\
+\begin{equation}
+   g(a,b,c) = a + b + c - P
+\end{equation}
+Posons $s = \frac{P}{2}$ le demi-périmètre qui sera fixé.\\ \\
+La formule de Héron nous affirme que :
+\begin{equation}
+   f(a,b,c) = A(a,b,c) = \sqrt[2]{s(s-a)(s-b)(s-c)}
+\end{equation}
+\clearpage
+\section{Question 2}
+Nous devons ainsi calculer le gradient de g et f.
+
+\begin{align*}
+\overrightarrow{\nabla}f(a,b,c) = 
+\left(\begin{matrix}
+\frac{\partial f(a,b,c)}{\partial a} \\ \\
+\frac{\partial f(a,b,c)}{\partial b} \\ \\
+\frac{\partial f(a,b,c)}{\partial c} \\ \\
+\end{matrix}\right),\quad          &  \overrightarrow{\nabla}g(a,b,c) = 
+\left(\begin{matrix}
+\frac{\partial g(a,b,c)}{\partial a} \\ \\
+\frac{\partial g(a,b,c)}{\partial b} \\ \\
+\frac{\partial g(a,b,c)}{\partial c} \\ \\
+\end{matrix}\right)      
+\end{align*}
+\indent Ce qui nous donne (en utilisant une fonction Python) :
+\begin{align*}
+\overrightarrow{\nabla}f(a,b,c) = 
+\left(\begin{matrix}
+- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- a + s\right)}\\ \\
+- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- b + s\right)}\\ \\
+- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- c + s\right)} \\ \\
+\end{matrix}\right),\quad          &  \overrightarrow{\nabla}g(a,b,c) = 
+\left(\begin{matrix}
+1 \\ 
+1 \\ 
+1 \\ 
+\end{matrix}\right)      
+\end{align*}
+\indent Le théorème des extremas liées nous affirme que : 
+\begin{equation}
+   \overrightarrow{\nabla}f = \lambda \overrightarrow{\nabla}g
+\end{equation}
+Ce qui nous donne un système :
+$\begin{cases} - \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- a + s\right)} = \lambda \\
+- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- b + s\right)} = \lambda \\
+- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- c + s\right)} = \lambda \end{cases}$
+
+
+
+
+
+
+
+
+
+
+
+\part{En dimension infinie}
 
 
 
