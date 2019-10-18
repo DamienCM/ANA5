@@ -12,16 +12,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1SL6HFGhBVoo7IrOdRelW3hFmWC" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/latex" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
@@ -36,7 +39,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Triangle">
+  <component name="RunManager" selected="Python.default">
     <configuration name="Triangle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ANA5" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,8 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Triangle" />
         <item itemvalue="Python.default" />
+        <item itemvalue="Python.Triangle" />
       </list>
     </recent_temporary>
   </component>

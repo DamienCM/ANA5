@@ -8,7 +8,6 @@
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage{mathpazo} % Palatino font
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \usepackage{amsmath}
@@ -99,17 +98,28 @@
 
 \chapter{Cas du triangle}
 \section{Question 1}
+
 Comme indiqué sur la question, on peut utiliser la formule de Héron pour calculer l'aire d'un triangle.
 Pour ce faire, il suffit d'avoir le périmètre du triangle.\\
+\indent Soit $f:R^{3}\longrightarrow$ R une fonction de classe $C^{1}$ , $g:R^{3}\longrightarrow$R une fonction de classe
+$C^{1}$ et soit $ G = \lbrace (x_{1},...,x_{n}\vert g(x_{1},...,x_{n})=0\rbrace.$\\
 \indent Soit P le périmètre et A l'aire d'un triangle dont les côtés ont pour mesures a, b et c. Posons alors\\
-\begin{equation}
-   g(a,b,c) = a + b + c - P
+\begin{equation}\label{eq:11}
+   g_{1}(a,b,c) = a + b + c - P
 \end{equation}
+La fonction $g_{1}$ représente la première contrainte qui est unique dans notre cas.\\
 Posons $s = \frac{P}{2}$ le demi-périmètre qui sera fixé.\\ \\
 La formule de Héron nous affirme que :
 \begin{equation}
    f(a,b,c) = A(a,b,c) = \sqrt[2]{s(s-a)(s-b)(s-c)}
 \end{equation}
+Nous cherchons à maximiser cette fonction f qui est associée à l'aire de notre triangle.\\
+\indent L'équation \eqref{eq:11} nous donne que $g_{1}(a,b,c) = 0$.\ Ce qui veut dire que le triplet (a,b,c) appartient à G : Le théorème des extremas liées s'applique.\\
+On a donc 
+\begin{equation}\label{eq:13}
+   \exists\lambda\in R^{+*} \quad \quad \overrightarrow{\nabla}f = \lambda \overrightarrow{\nabla}g_{1}
+\end{equation}
+
 \clearpage
 \section{Question 2}
 Nous devons ainsi calculer le gradient de g et f.
@@ -120,11 +130,11 @@ Nous devons ainsi calculer le gradient de g et f.
 \frac{\partial f(a,b,c)}{\partial a} \\ \\
 \frac{\partial f(a,b,c)}{\partial b} \\ \\
 \frac{\partial f(a,b,c)}{\partial c} \\ \\
-\end{matrix}\right),\quad          &  \overrightarrow{\nabla}g(a,b,c) = 
+\end{matrix}\right),\quad          &  \overrightarrow{\nabla}g_{1}(a,b,c) = 
 \left(\begin{matrix}
-\frac{\partial g(a,b,c)}{\partial a} \\ \\
-\frac{\partial g(a,b,c)}{\partial b} \\ \\
-\frac{\partial g(a,b,c)}{\partial c} \\ \\
+\frac{\partial g_{1}(a,b,c)}{\partial a} \\ \\
+\frac{\partial g_{1}(a,b,c)}{\partial b} \\ \\
+\frac{\partial g_{1}(a,b,c)}{\partial c} \\ \\
 \end{matrix}\right)      
 \end{align*}
 \indent Ce qui nous donne (en utilisant une fonction Python) :
@@ -134,24 +144,29 @@ Nous devons ainsi calculer le gradient de g et f.
 - \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- a + s\right)}\\ \\
 - \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- b + s\right)}\\ \\
 - \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- c + s\right)} \\ \\
-\end{matrix}\right),\quad          &  \overrightarrow{\nabla}g(a,b,c) = 
+\end{matrix}\right),\quad          &  \overrightarrow{\nabla}g_{1}(a,b,c) = 
 \left(\begin{matrix}
 1 \\ 
 1 \\ 
 1 \\ 
 \end{matrix}\right)      
 \end{align*}
-\indent Le théorème des extremas liées nous affirme que : 
+En utilisant \eqref{eq:13}, nous obtenons le système suivant :
 \begin{equation}
-   \overrightarrow{\nabla}f = \lambda \overrightarrow{\nabla}g
+\begin{cases} - \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- a + s\right)} = \lambda \quad (1)\\
+- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- b + s\right)} = \lambda \quad (2) \\
+- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- c + s\right)} = \lambda 
+\quad (3) \end{cases}
 \end{equation}
-Ce qui nous donne un système :
-$\begin{cases} - \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- a + s\right)} = \lambda \\
-- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- b + s\right)} = \lambda \\
-- \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- c + s\right)} = \lambda \end{cases}$
-
-
-
+On a alors directement en utilisant l'équation (1) et (2) $\frac{s(s-b)(s-c)}{s-a} = \frac{s(s-a)(s-c)}{s-b}$
+Qui se simplifie en $(s-a)^{2}=(s-b)^{2}$.
+Or on sait que le demi-périmètre est toujours plus grand que chaque coté du triangle. Donc a = b.
+on faisant de même avec (2) et (3), on retrouve finalement que a = b = c.\\
+Ainsi, en utilisant \eqref{eq:11}, \ on obtient que 
+\begin{equation}
+   \boxed{a = b = c = \frac{P}{3}}
+\end{equation}
+Ce qui correspond à un triangle \textbf{équilatéral}.
 
 
 
