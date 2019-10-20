@@ -13,6 +13,13 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{tikz,pgfplots,pgf}
+\pgfplotsset{compat=1.16}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+
 
 \addto\captionsfrench{\renewcommand{\chaptername}{Cas}}
 
@@ -54,7 +61,7 @@
 		\begin{flushleft}
 			\large
 			\textit{Auteurs}\\
-			\textsc{Abrini} Mouad % Your name
+			\textsc{Abrini} Mouad\\ % Your name
 			\textsc{Cartier Millon} Damien % Your name
 		\end{flushleft}
 	\end{minipage}
@@ -102,7 +109,7 @@
 Comme indiqué sur la question, on peut utiliser la formule de Héron pour calculer l'aire d'un triangle.
 Pour ce faire, il suffit d'avoir le périmètre du triangle.\\
 \indent Soit $f:R^{3}\longrightarrow$ R une fonction de classe $C^{1}$ , $g:R^{3}\longrightarrow$R une fonction de classe
-$C^{1}$ et soit $ G = \lbrace (x_{1},...,x_{n}\vert g(x_{1},...,x_{n})=0\rbrace.$\\
+$C^{1}$ et soit $ G = \lbrace (x_{1},...,x_{n})\vert g(x_{1},...,x_{n})=0\rbrace.$\\
 \indent Soit P le périmètre et A l'aire d'un triangle dont les côtés ont pour mesures a, b et c. Posons alors\\
 \begin{equation}\label{eq:11}
    g_{1}(a,b,c) = a + b + c - P
@@ -114,11 +121,7 @@ La formule de Héron nous affirme que :
    f(a,b,c) = A(a,b,c) = \sqrt[2]{s(s-a)(s-b)(s-c)}
 \end{equation}
 Nous cherchons à maximiser cette fonction f qui est associée à l'aire de notre triangle.\\
-\indent L'équation \eqref{eq:11} nous donne que $g_{1}(a,b,c) = 0$.\ Ce qui veut dire que le triplet (a,b,c) appartient à G : Le théorème des extremas liées s'applique.\\
-On a donc 
-\begin{equation}\label{eq:13}
-   \exists\lambda\in R^{+*} \quad \quad \overrightarrow{\nabla}f = \lambda \overrightarrow{\nabla}g_{1}
-\end{equation}
+
 
 \clearpage
 \section{Question 2}
@@ -151,6 +154,12 @@ Nous devons ainsi calculer le gradient de g et f.
 1 \\ 
 \end{matrix}\right)      
 \end{align*}
+\section{Question 3}
+\indent L'équation \eqref{eq:11} nous donne que $g_{1}(a,b,c) = 0$.\ Ce qui veut dire que le triplet (a,b,c) appartient à G : Le théorème des extremas liées s'applique.\\
+On a donc 
+\begin{equation}\label{eq:13}
+   \exists\lambda\in R^{+*} \quad \quad \overrightarrow{\nabla}f = \lambda \overrightarrow{\nabla}g_{1}
+\end{equation}
 En utilisant \eqref{eq:13}, nous obtenons le système suivant :
 \begin{equation}
 \begin{cases} - \frac{\sqrt{s \left(- a + s\right) \left(- b + s\right) \left(- c + s\right)}}{2 \left(- a + s\right)} = \lambda \quad (1)\\
@@ -167,11 +176,87 @@ Ainsi, en utilisant \eqref{eq:11}, \ on obtient que
    \boxed{a = b = c = \frac{P}{3}}
 \end{equation}
 Ce qui correspond à un triangle \textbf{équilatéral}.
+\chapter{Cas d'un quadrilatère}
+\section{Question 1}
+\indent Pour simplifier les calculs, on va utiliser le \textbf{théorème isopérimétrique} pour un quadrilatère, qui affirme que 
+pour l'aire d'un quadrilatère à périmètre fixé soit maximale, il faut qu'il soit régulier. Nous éviterons ainsi le cas des quadrilatères concaves et croisés.\\
+Soit Q un quadrilatère régulier comme représenté sur la figure 
 
 
+\begin{center}
+\begin{tikzpicture}[scale=1.25]%,cap=round,>=latex]
+\coordinate [label=left:$A$] (A) at (-1.5cm,-1.cm);
+\coordinate [label=right:$B$] (B) at (3cm,-1.0cm);
+\coordinate [label=above:$C$] (C) at (1.5cm,1.0cm);
+\coordinate [label=above:$D$] (D) at (0cm,1.5cm);
+\draw (A) -- node[below] {$x$} (B) -- node[right] {$y$}(C) -- node[above] {$z$} (D)--node[left] {$w$}(A);
+\draw (A)--node[right]{$d$}(C);
+\end{tikzpicture}
+\end{center}
+On a ainsi $P = x+y+z+w$.\\
+\indent Soit $f:R^{4}\longrightarrow$ R une fonction de classe $C^{1}$ , $g:R^{4}\longrightarrow$R une fonction de classe
+$C^{1}$ et soit $ G = \lbrace (x_{1},...,x_{n})\vert g(x_{1},...,x_{n})=0\rbrace.$\\
+\indent 
+Posons alors
+\begin{equation}\label{eq:21}
+ g_{1}(x,y,z,w,d)=x+y+z+w-P
+\end{equation}
+$g_{1}$ représente notre première contrainte.\\
+Il est clairement remarquable que ce quadrilatère peut se diviser en deux triangle ABC et ADC.\ Ce qui nous permet pour avoir l'aire totale de Q qui est la somme des aires des deux triangles.\ On notera $s$ le demi-périmètre de ABC et $t$ celui de ADC.\\
+On aura ainsi en utilisant la formule d'Héron:
+\begin{equation}
+    f(x,y,z,w,d)=\sqrt{s(s-x)(s-w)(s-d)}+\sqrt{t(t-y)(t-x)(t-d)}
+\end{equation}
+On cherche à maximiser cette fonction qui est associée à l'aire de notre quadrilatère.\\
+Calculons alors le gradient de f et de $g_{1}$.\ On obtient\\
+\begin{align*}
+\overrightarrow{\nabla}f(x,y,z,w,d) = 
+\left(\begin{matrix}
+- \frac{\sqrt{s \left(- d + s\right) \left(s - w\right) \left(s - x\right)}}{2 \left(s - x\right)}\\ \\
+- \frac{\sqrt{t \left(- d + t\right) \left(t - y\right) \left(t - z\right)}}{2 \left(t - y\right)}\\ \\
+- \frac{\sqrt{t \left(- d + t\right) \left(t - y\right) \left(t - z\right)}}{2 \left(t - z\right)} \\ \\
+- \frac{\sqrt{s \left(- d + s\right) \left(s - w\right) \left(s - x\right)}}{2 \left(s - w\right)}\\ \\
+- \frac{\sqrt{s \left(- d + s\right) \left(s - w\right) \left(s - x\right)}}{2 \left(- d + s\right)} - \frac{\sqrt{t \left(- d + t\right) \left(t - y\right) \left(t - z\right)}}{2 \left(- d + t\right)}
+\end{matrix}\right),\quad          &  \overrightarrow{\nabla}g_{1}(a,b,c) = 
+\left(\begin{matrix}
+1 \\ 
+1 \\ 
+1 \\ 
+1\\
+0
+\end{matrix}\right)      
+\end{align*}
+l'équation \eqref{eq:21} nous affirme que $ g_{1}(x,y,z,w,d)=0$.\ Donc le théorème des extremas liées s'applique. On a ainsi:
+\begin{equation}\label{eq:23}
+   \exists\lambda\in R^{+*} \quad \quad \overrightarrow{\nabla}f = \lambda \overrightarrow{\nabla}g_{1}
+\end{equation}
+En utilisant \eqref{eq:23}, nous obtenons le système suivant :
+\begin{equation}
+\begin{cases} - \frac{\sqrt{s \left(- d + s\right) \left(s - w\right) \left(s - x\right)}}{2 \left(s - x\right)} = \lambda \\
+- \frac{\sqrt{t \left(- d + t\right) \left(t - y\right) \left(t - z\right)}}{2 \left(t - y\right)}\ = \lambda  \\
+- \frac{\sqrt{t \left(- d + t\right) \left(t - y\right) \left(t - z\right)}}{2 \left(t - z\right)} = \lambda \\
+- \frac{\sqrt{s \left(- d + s\right) \left(s - w\right) \left(s - x\right)}}{2 \left(s - w\right)} = \lambda \\
+- \frac{\sqrt{s \left(- d + s\right) \left(s - w\right) \left(s - x\right)}}{2 \left(- d + s\right)} - \frac{\sqrt{t \left(- d + t\right) \left(t - y\right) \left(t - z\right)}}{2 \left(- d + t\right)} = 0 
+ \end{cases}
+\end{equation}
+En combinant les équations 1 et 4, on trouve que $x=w$ et en combinant les équations 2 et 3, on trouve que $y=z$.Finalement il suffit de remplacer ce résultat dans l'équation 5 pour trouver que $x=y=w=z$.\\ Nous avons ainsi trouvé que les 4 cotés doivent être égaux. Or pour, un quadrilatère régulier une telle figure pourrait être soit un losange, soit un carré.\ Ce résultat qui n'est pas unique est peut être du aux théorème des extrêmes liée qui nous fournit soit une valeur minimale soit maximale de la fonction étudié ( Ce qui assez compréhensible dans le cas d'un losange).\\
+Cependant, le choix n'est pas difficile.\ Regardons ce losange ($x=y=z=w$) :
+\begin{center}
+\begin{tikzpicture}[scale=1.25]%,cap=round,>=latex]
+\coordinate [label=left:$A$] (A) at (0cm,0cm);
+\coordinate [label=right:$B$] (B) at (2cm,.0cm);
+\coordinate [label=above:$C$] (C) at (3cm,1.73cm);
+\coordinate [label=above:$D$] (D) at (1cm,1.73cm);
+\draw (A) -- node[below] {$x$} (B) -- node[right] {$y$}(C) -- node[above] {$z$} (D)--node[left] {$w$}(A);
+\draw (A)--node[right]{$d$}(C);
+\draw (D)--(B);
+\draw (1.38, 1.07)--(1.59, 1.19)--(1.7, 0.99);
+\end{tikzpicture}
+\end{center}
 
-
-
+Pour calculer sa surface, il suffit de le diviser en deux triangles DAB et  DCB qui ont la même surface.\ L'aire totale est donc  $S = \frac{1}{2}.2. x^{2}sin(\widehat{DAB})= x^{2}sin(\widehat{DAB})$.\\
+Il est facile de remarque que la valeur maximale de ce losange est telle que $sin(\widehat{DAB})=1$.\ Ce qui veut dire que $\widehat{DAB}=\frac{\pi}{2}$.\\
+Nous pouvant ainsi en déduire que le quadrilatère qui, à un périmètre fixé, a une surface maximale est un \textbf{carré} dont les cotés sont égaux à $\frac{P}{4}$.
 
 
 
