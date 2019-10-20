@@ -257,9 +257,26 @@ Cependant, le choix n'est pas difficile.\ Regardons ce losange ($x=y=z=w$) :
 Pour calculer sa surface, il suffit de le diviser en deux triangles DAB et  DCB qui ont la même surface.\ L'aire totale est donc  $S = \frac{1}{2}.2. x^{2}sin(\widehat{DAB})= x^{2}sin(\widehat{DAB})$.\\
 Il est facile de remarque que la valeur maximale de ce losange est telle que $sin(\widehat{DAB})=1$.\ Ce qui veut dire que $\widehat{DAB}=\frac{\pi}{2}$.\\
 Nous pouvant ainsi en déduire que le quadrilatère qui, à un périmètre fixé, a une surface maximale est un \textbf{carré} dont les cotés sont égaux à $\frac{P}{4}$.
+\chapter{Un cas moins trivial}
+\section{Question 1}
+Afin d'éviter quelques hypothèses faites dans la partie précédente (raisonnement sur les angles),\ on peut utiliser le fait que tout quadrilatère à périmètre fixé et qui a une surface maximale, est nécessairement cyclique. \ C'est à dire que ses sommets appartiennent au même cercle.\\
+Ainsi, on pourra utiliser \textbf{la formule de Brahmagupta}:
+\begin{equation}
+   K={\sqrt{(s-a)(s-b)(s-c)(s-d)}} 
+\end{equation}
+Avec K l'aire du quadrilatère et $a,b,c$ et $d$ ses cotés.\ $s$ représente le demi-périmètre qui est égal à $\frac{a+b+c+d}{2}$.\\
+\indent Soit $f:R^{4}\longrightarrow$ R une fonction de classe $C^{1}$ , $g:R^{4}\longrightarrow$R une fonction de classe
+$C^{1}$ et soit $ G = \lbrace (x_{1},...,x_{n})\vert g(x_{1},...,x_{n})=0\rbrace.$\\
+\indent Posons 
+\begin{equation}
+    f(a,b,c,d)={\sqrt{(s-a)(s-b)(s-c)(s-d)}} 
+\end{equation}
 
-
-
+Dans ce cas la, on a deux contraintes à savoir que le périmètre doit être fixé et un coté du quadrilatère doit être égal à 1.\\
+\indent Soit $g_{1}$ et $g_{2}$ réspectivement la première et la deuxième contrainte, telle que:
+\begin{align*}
+     g_{1}(a,b,c,d)=a+b+c+d-2s,\quad  & g_{2}(a,b,c,d)=c-1
+\end{align*}
 \part{En dimension infinie}
 
 

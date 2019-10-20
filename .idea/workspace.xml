@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dac23376-86c8-4384-bda7-225ecf223940" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Analyse5/Outils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Analyse5/quadrilatère.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ANA5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ANA5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyse5/Triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Analyse5/Triangle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Document latex/Reponse.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Document latex/Reponse.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Document latex/Reponse.log" beforeDir="false" afterPath="$PROJECT_DIR$/Document latex/Reponse.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Document latex/Reponse.out" beforeDir="false" afterPath="$PROJECT_DIR$/Document latex/Reponse.out" afterDir="false" />
