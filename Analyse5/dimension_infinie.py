@@ -5,43 +5,44 @@ import os
 
 # Question 1
 def integrale(f, a, b, n=10 ** 6):
-	X = np.linspace(a, b, n)
-	Y = f(X)
-	S = np.sum(Y[1:-1]) + (Y[0] + Y[-1]) / 2
-	S = S * (b - a) / n
-	return S
+    X = np.linspace(a, b, n)
+    Y = f(X)
+    S = np.sum(Y[1:-1]) + (Y[0] + Y[-1]) / 2
+    S = S * (b - a) / n
+    return S
 
 
 def derivee(f, xo, dt=10 ** -6):
-	return (f(xo + dt) - f(xo - dt)) / (2 * dt)
+    return (f(xo + dt) - f(xo - dt)) / (2 * dt)
 
 
 def F(f):
-	def f_longueur(x):
-		return np.sqrt(1 + derivee(f, x) ** 2)
+    def f_longueur(x):
+        return np.sqrt(1 + derivee(f, x) ** 2)
 
-	return integrale(f_longueur, -1, 1)
+    return integrale(f_longueur, -1, 1)
 
 
 def G(f):
-	return integrale(f, -1, 1)
+    return integrale(f, -1, 1)
 
 
 # Question 2
 
 def fonction_1(x):
-	return 1 - x ** 2
+    return 1 - x ** 2
 
 
 def fonction_2(x):
-	return 1 - x ** 4
+    return 1 - x ** 4
 
 
 def fonction_3(x):
-	return np.sin(np.pi / 2 * (1 - x))
+    return np.sin(np.pi / 2 * (1 - x))
+
 
 def fonction_4(x):
-	return np.sqrt(1.001-x**2)
+    return np.sqrt(1.001 - x ** 2)
 
 
 X = np.linspace(-1, 1, 10 ** 6)
@@ -49,7 +50,7 @@ X = np.linspace(-1, 1, 10 ** 6)
 Y1 = fonction_1(X)
 Y2 = fonction_2(X)
 Y3 = fonction_3(X)
-Y4=fonction_4(X)
+Y4 = fonction_4(X)
 
 fig1, ax1 = plt.subplots()
 fig2, ax2 = plt.subplots()
