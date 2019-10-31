@@ -1,7 +1,8 @@
 from sympy import diff, latex, Symbol
 
-#calcul gradient fonction n variables
-def grad(f,*argv):
+
+# calcul gradient fonction n variables
+def grad(f, *argv):
     arguments = []
     for arg in argv:
         arg = Symbol(str(arg))
