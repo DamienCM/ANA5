@@ -269,13 +269,31 @@ Avec K l'aire du quadrilatère et $a,b,c$ et $d$ ses cotés.\ $s$ représente le
 $C^{1}$ et soit $ G = \lbrace (x_{1},...,x_{n})\vert g(x_{1},...,x_{n})=0\rbrace.$\\
 \indent Posons 
 \begin{equation}
-    f(a,b,c,d)={\sqrt{(s-a)(s-b)(s-c)(s-d)}} 
+    f(x,y,z,d)={\sqrt{(s-x)(s-y)(s-z)(s-1)}} 
 \end{equation}
 
 Dans ce cas la, on a deux contraintes à savoir que le périmètre doit être fixé et un coté du quadrilatère doit être égal à 1.\\
-\indent Soit $g_{1}$ et $g_{2}$ réspectivement la première et la deuxième contrainte, telle que:
+\indent Soit $g_{1}$la première telle que:
 \begin{align*}
-     g_{1}(a,b,c,d)=a+b+c+d-2s,\quad  & g_{2}(a,b,c,d)=c-1
+     g_{1}(x,y,z,d)=x+y+z+1-2s,\quad 
+\end{align*}
+On cherche à maximiser $f$ associé à l'aire de notre quadrilatère.
+Comme dans les cas précédents, toutes les conditions sont satisfaites pour appliquer le théorème des extrema liées.\\
+Calculons alors le gradient de $f$ et de $g_{1}$.
+\begin{align*}
+\overrightarrow{\nabla}f(x,y,z,w,d) = 
+\left(\begin{matrix}
+-\frac{\sqrt{\left(s - 1\right) \left(s - x\right) \left(s - y\right) \left(s - z\right)} }{2 \left(s - x\right)}\\ \\
+- \frac{\sqrt{\left(s - 1\right) \left(s - x\right) \left(s - y\right) \left(s - z\right)}}{2 \left(s - y\right)}\\ \\
+- \frac{\sqrt{\left(s - 1\right) \left(s - x\right) \left(s - y\right) \left(s - z\right)}}{2 \left(s - z\right)}\\ \\
+0
+\end{matrix}\right),\quad          &  \overrightarrow{\nabla}g_{1}(a,b,c) = 
+\left(\begin{matrix}
+1 \\ 
+1 \\ 
+1 \\ 
+0
+\end{matrix}\right)      
 \end{align*}
 \part{En dimension infinie}
 

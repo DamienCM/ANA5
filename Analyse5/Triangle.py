@@ -1,6 +1,6 @@
 # importation des modules
 from math import sqrt
-from Analyse5.Outils import grad
+from Outils import grad
 
 
 # la fonction qui permet de calculer le périmètre d'un triangle
