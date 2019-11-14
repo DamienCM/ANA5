@@ -295,6 +295,54 @@ Calculons alors le gradient de $f$ et de $g_{1}$.
 0
 \end{matrix}\right)      
 \end{align*}
+En appliquant le théorème on obtient le système:
+\begin{equation}
+\begin{cases} -\frac{\sqrt{\left(s - 1\right) \left(s - x\right) \left(s - y\right) \left(s - z\right)} }{2 \left(s - x\right)} = \lambda \\
+-\frac{\sqrt{\left(s - 1\right) \left(s - x\right) \left(s - y\right) \left(s - z\right)} }{2 \left(s - y\right)}= \lambda  \\
+-\frac{\sqrt{\left(s - 1\right) \left(s - x\right) \left(s - y\right) \left(s - z\right)} }{2 \left(s - z\right)} = \lambda \\
+
+ \end{cases}
+\end{equation}
+On trouve directement que $x = y = z$. Donc le quadrilatère possède un coté égal à 1 et 3 cotés qui sont égaux.\\
+Son périmètre devient alors avec \textbf{$P>1$} : 
+\begin{align*}
+     P=3x+1 \Leftrightarrow x = \frac{P-1}{3}\\
+\end{align*}
+\textbf{Cas 1 (P=4):} On obtient x = y = z = 1.\quad notre quadrilatère est un carré.\\
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0);
+\end{tikzpicture}
+\end{center}
+% This file was created by tikzplotlib v0.8.2.
+% This file was created by tikzplotlib v0.8.2.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+axis equal,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xmajorgrids,
+xmin=0.95, xmax=2.05,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ymajorgrids,
+ymin=-2.1059418861273, ymax=1.14790199457749,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 1
+1.5 -1.95803989154981
+2 1
+1 1
+};
+\end{axis}
+
+\end{tikzpicture}
 \part{En dimension infinie}
 
 

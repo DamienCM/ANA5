@@ -1,37 +1,17 @@
-import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
+import numpy as np
 
-k = 2 * np.pi
-w = 2 * np.pi
-dt = 0.01
+plt.style.use("ggplot")
 
-xmin = 0
-xmax = 3
-nbx = 100
+coord = [[1,1], [2,1], [2,2], [1,2], [0.5,1.5]]
+coord.append(coord[0]) #repeat the first point to create a 'closed loop'
 
-x = np.linspace(xmin, xmax, nbx)
+xs, ys = zip(*coord) #create lists of x and y values
 
-fig = plt.figure()  # initialise la figure
-line, = plt.plot([], [])
-plt.xlim(xmin, xmax)
-plt.ylim(-1, 1)
+plt.figure()
+plt.plot(xs,ys)
+plt.grid(True)
 
+import tikzplotlib
 
-# fonction à définir quand blit=True
-# crée l'arrière de l'animation qui sera présent sur chaque image
-def init():
-    line.set_data([], [])
-    return line,
-
-
-def animate(i):
-    t = i * dt
-    y = np.cos(k * x - w * t)
-    line.set_data(x, y)
-    return line,
-
-
-ani = animation.FuncAnimation(fig, animate, init_func=init, frames=100, blit=True, interval=20, repeat=False)
-
-plt.show()
+tikzplotlib.save("test.tex")

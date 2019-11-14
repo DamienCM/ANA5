@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ebc758b-3242-4f09-88bf-4ed731a549eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Analyse5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Analyse5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Triangle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quadrilatère.py" beforeDir="false" afterPath="$PROJECT_DIR$/quadrilatère.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document latex/Reponse.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../Document latex/Reponse.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document latex/Reponse.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Document latex/Reponse.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document latex/Reponse.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Document latex/Reponse.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document latex/Reponse.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../Document latex/Reponse.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document latex/Reponse.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Document latex/Reponse.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Document latex/Reponse.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../Document latex/Reponse.toc" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
