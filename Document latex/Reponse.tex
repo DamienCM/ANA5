@@ -14,9 +14,11 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{tikz,pgfplots,pgf}
-\pgfplotsset{compat=1.16}
+\pgfplotsset{compat=1.15}
 \usepackage{mathrsfs}
 \usetikzlibrary{arrows}
+\usetikzlibrary{backgrounds}
+
 
 
 
@@ -308,14 +310,18 @@ Son périmètre devient alors avec \textbf{$P>1$} :
 \begin{align*}
      P=3x+1 \Leftrightarrow x = \frac{P-1}{3}\\
 \end{align*}
-\textbf{Cas 1 (P=4):} On obtient x = y = z = 1.\quad notre quadrilatère est un carré.\\
+\textbf{Cas 1 (P=4):} On obtient x = y = z = 1.\quad notre quadrilatère est un carré (d'après la 2ème question).\\
 \begin{center}
 \begin{tikzpicture}
 \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0);
 \end{tikzpicture}
 \end{center}
-% This file was created by tikzplotlib v0.8.2.
-% This file was created by tikzplotlib v0.8.2.
+\pagebreak
+\textbf{Cas 1 ($P\neq 4$):}Posons $P_{a}=a$ avec $a\neq 4$. Dans ce cas la, la figure obtenue n'est pas assez évidente.\quad En effet, on obtient une figure différente pour chaque valeur de a.\\
+Pour pouvoir tracer le quadrilatère de surface maximale, on va procéder comme suit:\\
+$\bullet $ On commence par tracer le triangle qui possède une surface maximale. Un des cotés de ce triangle doit être égale à 1. La formule de l'aire d'un triangle nous oblige donc à choisir un triangle rectangle pour avoir une surface maximale.\\A titre d'exemple, pour $a=10$ (donc x=3) on obtient le triangle suivant:
+\begin{center}
+
 \begin{tikzpicture}
 
 \definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
@@ -330,19 +336,72 @@ xmin=0.95, xmax=2.05,
 xtick style={color=black},
 y grid style={white!69.01960784313725!black},
 ymajorgrids,
-ymin=-2.1059418861273, ymax=1.14790199457749,
+ymin=-2.15, ymax=1.15,
 ytick style={color=black}
 ]
 \addplot [semithick, color0]
 table {%
 1 1
-1.5 -1.95803989154981
+1 -2
 2 1
 1 1
 };
 \end{axis}
 
 \end{tikzpicture}
+\end{center}
+$\bullet $ Ensuite, puisque les deux autres cotés sont égales à 3 , il faut tracer le triangle équilatéral à partir des points C(2,1) et B(1,-2). Afin de pouvoir coder cela sur Python et ainsi le simuler pour différentes valeurs du périmètre, il faudra trouver une méthode de construction adéquate.\\
+\quad On commence d'abord par tracer la médiatrice de [AB] et puis le cercle de centre B et de rayon $R_{a}=3$ et aussi le segment reliant B et le point d'intersection entre le cercle et la médiatrice. on obtient cela :
+\begin{center}
+\definecolor{dtsfsf}{rgb}{0.8274509803921568,0.1843137254901961,0.1843137254901961}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,framed]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-4.763499064435677,
+xmax=7.607480177817524,
+ymin=-6.127535557083458,
+ymax=2.4550988307080934,
+xtick={-4,-3,...,7},
+ytick={-6,-5,...,2},]
+\clip(-4.763499064435677,-6.127535557083458) rectangle (7.607480177817524,2.4550988307080934);
+\draw [line width=2pt,color=wrwrwr] (1,1)-- (1,-2);
+\draw [line width=2pt,color=wrwrwr] (2,1)-- (1,1);
+\draw [line width=2pt,color=wrwrwr] (2,1)-- (1,-2);
+\draw [line width=2pt,color=wrwrwr] (1,-2) circle (3cm);
+\draw [line width=2pt,color=dtsfsf,domain=-4.763499064435677:7.607480177817524] plot(\x,{(-0--1*\x)/-3});
+\draw [line width=2pt,color=wrwrwr] (1,-2)-- (3.9186773244895647,-1.306225774829855);
+\draw [line width=2pt,color=wrwrwr] (2,1)-- (3.9186773244895647,-1.306225774829855);
+\begin{scriptsize}
+\draw [fill=rvwvcq] (1,1) circle (2.5pt);
+\draw[color=rvwvcq] (1.0902428434471094,1.2297725995333642) node {$A$};
+\draw [fill=rvwvcq] (1,-2) circle (2.5pt);
+\draw[color=rvwvcq] (0.9297197563936508,-2.2054214634106355) node {$B$};
+\draw [fill=rvwvcq] (2,1) circle (2.5pt);
+\draw[color=rvwvcq] (2.0854859831785517,1.2297725995333642) node {$C$};
+\draw [fill=wrwrwr] (3.9186773244895647,-1.306225774829855) circle (2pt);
+\draw[color=wrwrwr] (4.001061488683157,-1.0924613931733274) node {$D$};
+\draw [fill=wrwrwr] (1.5,-0.5) circle (2pt);
+\draw[color=wrwrwr] (1.582513643744382,-0.2898459579060375) node {$E$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+$\bullet $ La prochaine étape consiste à trouver les coordonnées du point D analytiquement. Pour ce faire, on va utiliser le fait que $\overrightarrow{EB}.\overrightarrow{ED}=0$. On sait que $\overrightarrow{EB}=(\frac{-1}{2},\frac{-3}{2})$ et que $\overrightarrow{ED}=(x_{D}-\frac{3}{2},y_{D}+\frac{1}{2})$. Donc 
+\begin{equation}
+   \left(\frac{-1}{2},\frac{-3}{2}\right) .\left( x_{D}-\frac{3}{2},y_{D}+\frac{1}{2}\right)= 0 \\
+   \Leftrightarrow x_{D}=-3y_{D}
+\end{equation}
+Or, on sait que le point D appartient au cercle (B,3). Donc:
+\begin{equation}
+ \left(x_{D}-1\right)^{2} + \left(y_{D}+2\right)^{2}=9
+\end{equation}
+En utilisant (3.4) et (3.5), on obtient directement (en résolvant une équation de degré 2) que les coordonnées de D seront (3.3,-1.1).
+
 \part{En dimension infinie}
 
 

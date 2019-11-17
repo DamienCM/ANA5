@@ -2,25 +2,37 @@
 \begin{tikzpicture}
 
 \definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+\definecolor{color2}{rgb}{0.75,0.75,0}
 
 \begin{axis}[
 tick align=outside,
 tick pos=left,
 x grid style={white!69.01960784313725!black},
 xmajorgrids,
-xmin=0.95, xmax=2.05,
+xmin=0.855, xmax=4.045,
 xtick style={color=black},
 y grid style={white!69.01960784313725!black},
 ymajorgrids,
-ymin=-2.1059418861273, ymax=1.14790199457749,
+ymin=-2.15, ymax=1.15,
 ytick style={color=black}
 ]
+\draw[draw=black,fill opacity=0] (axis cs:1,-2) circle (3);
 \addplot [semithick, color0]
 table {%
 1 1
-1.5 -1.95803989154981
+1 -2
 2 1
 1 1
+};
+\addplot [semithick, color1, mark=*, mark size=3, mark options={solid}]
+table {%
+1.5 -0.5
+3.9 -1.3
+};
+\addplot [semithick, color2, mark=*, mark size=3, mark options={solid}, only marks]
+table {%
+1 -2
 };
 \end{axis}
 
