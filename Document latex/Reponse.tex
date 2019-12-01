@@ -988,8 +988,59 @@ table {%
 \end{tikzpicture}
 \end{center}
 On trouve F = 3.0799 et G=1.57234
- 
-
+\pagebreak
+\section{Question 3}
+Dans cette question, il faudra calculer la différentielle de F et G afin de les utiliser dans l'application du théorème des extremas liés.\
+On sait que la différentielle de F est définie par : 
+\begin{equation}
+F(y+\eta)=F(y)+dF(y)(\eta)+o(||\eta||)
+\end{equation}
+On obtient donc
+\begin{equation}
+F(y+\eta)-F(y)=\int\limits_{-1}^{1} \sqrt{\left(\frac{d}{d x} y{\left(x \right)} + \frac{d}{d x} \eta{\left(x \right)}\right)^{2} + 1}\, dx - \int\limits_{-1}^{1} \sqrt{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1}\, dx
+\end{equation}
+Posons $ a = y'(x)$ et $\varepsilon = \eta'(x)$ .Ainsi, on peut réunir les deux intégrale et on obtient:
+\begin{equation}
+F(a+\varepsilon)-F(a)=\int\limits_{-1}^{1} \sqrt{\left(a +\varepsilon \right)^{2} + 1}\ - \sqrt{a^{2} + 1}\, dx
+\end{equation}
+Or, on sait que 
+\begin{equation}
+F(a+\varepsilon)-F(a) = \frac{a}{\sqrt{1+a^{2}}}\varepsilon + O(\varepsilon^{2})
+\end{equation}
+donc
+\begin{equation}
+F(y+\eta)-F(y)= \int\limits_{-1}^{1} \frac{\frac{d}{dx}y(x).\frac{d}{dx}\eta(x)}{\sqrt{1+\left( \frac{d}{dx}y(x)\right)^{2} }}dx
+\end{equation}
+En posant $u = \dfrac{\dfrac{d}{dx}y(x)}{\sqrt{1+\left( \dfrac{d}{dx}y(x)\right) ^{2}}}$ et $v'=\dfrac{d}{dx}\eta(x)$ et en faisant une intégration par partie, on obtient:
+\begin{align*}
+&F(y+\eta)-F(y)=- \int\limits_{-1}^{1} \left(\frac{\frac{d^{2}}{d x^{2}} y{\left(x \right)}}{\sqrt{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1}} - \frac{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} \frac{d^{2}}{d x^{2}} y{\left(x \right)}}{\left(\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1\right)^{\frac{3}{2}}}\right) \eta{\left(x \right)}\, dx\\
+& + \frac{\eta{\left(1 \right)} \left. \frac{d}{d x} y{\left(x \right)} \right|_{\substack{ x=1 }}}{\sqrt{\left. \frac{d}{d x} y{\left(x \right)} \right|_{\substack{ x=1 }}^{2} + 1}} - \frac{\eta{\left(-1 \right)} \left. \frac{d}{d x} y{\left(x \right)} \right|_{\substack{ x=-1 }}}{\sqrt{\left. \frac{d}{d x} y{\left(x \right)} \right|_{\substack{ x=-1 }}^{2} + 1}}
+\end{align*}
+Or, pour que $y+\eta$ soit une fonction reliant B à C, il faut que $\eta(-1)=\eta(1)=0$. On a donc finalement:
+\begin{equation}
+dF(y)= - \int\limits_{-1}^{1} \left(\frac{\frac{d^{2}}{d x^{2}} y{\left(x \right)}}{\sqrt{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1}} - \frac{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} \frac{d^{2}}{d x^{2}} y{\left(x \right)}}{\left(\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1\right)^{\frac{3}{2}}}\right) \eta{\left(x \right)}\, dx
+\end{equation}
+On va maintenant déterminer la différentielle de G.
+\begin{equation}
+dG(y)(\eta) = G(y+\eta)-G(y)+o(||\eta||)\\
+\end{equation}
+Ce qui nous donne:\\
+$G(y+\eta)-G(y)= \int\limits_{-1}^{1} y(x)+\eta(x)dx - \int\limits_{-1}^{1}y(x)dx = \int\limits_{-1}^{1} \eta(x)dx$
+\section{Question 4}
+On peut appliquer le théorème des extremas liés désormais. Comme précisé dans l'indication, pour avoir $dF(f)=\lambda dG(f)$, il faut que le rapport des deux intégrandes de leurs différentielles soit constant. Ce qui nous donne:
+\begin{align}
+\left(\frac{\frac{d^{2}}{d x^{2}} y{\left(x \right)}}{\sqrt{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1}} - \frac{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} \frac{d^{2}}{d x^{2}} y{\left(x \right)}}{\left(\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1\right)^{\frac{3}{2}}}\right) \eta{\left(x \right)} = \lambda \eta(x), \quad \lambda \in R.
+\end{align}
+Puisque $\eta$ est non nulle, on obtient:
+\begin{equation}
+\left(\frac{\frac{d^{2}}{d x^{2}} y{\left(x \right)}}{\sqrt{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1}} - \frac{\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} \frac{d^{2}}{d x^{2}} y{\left(x \right)}}{\left(\left(\frac{d}{d x} y{\left(x \right)}\right)^{2} + 1\right)^{\frac{3}{2}}}\right) = \lambda, \quad \lambda \in R.
+\end{equation}
+Ce qui représente une équation différentielle d'ordre 2 non linéaire en y et donc difficile à résoudre manuellement. On va donc utiliser Python pour s'en sortir facilement.\\
+L'ensemble des solution sont les fonctions définies sur $[-1,1]$ tel que:
+\begin{equation}
+y(x) = \dfrac{(\lambda x+1)(\lambda x-1)\sqrt{-\dfrac{1}{\lambda^{2}x^{2}-1}}}{\lambda}-\dfrac{(\lambda^{2}-1)\sqrt{-\dfrac{1}{\lambda^{2}-1}})}{\lambda}
+\end{equation}
+avec $\lambda \in ]-1,1[$
 
 
 
