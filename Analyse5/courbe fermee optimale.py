@@ -11,17 +11,9 @@ def integrale_trapeze(a, b, f, n=10 ** 6):
 
 
 def derivee(f, a, n=10 ** -6):
+    #on derive au milieu
     return (f(a + n) - f(a - n)) / (2 * n)
 
-
-
-
-def r(t):
-    return None
-
-
-def teta(t):
-    return None
 
 
 def L(r):
@@ -70,6 +62,9 @@ def r_d(t):
 d = 1 / L(r_d)
 
 
+
+#On represente les courbes
+
 figs, axs = plt.subplots(4,1,sharex=True,figsize=(8,15))
 X = np.linspace(0, 2 * np.pi, 10 ** 6)
 Y_a = a * r_a(X)
@@ -78,13 +73,14 @@ Y_c = c * r_c(X)
 Y_d = d * r_d(X)
 Ys=[Y_a,Y_b,Y_c,Y_d]
 
+#calcul des Aires
 As=[round(a**2*A(r_a),5),round(b**2*A(r_b),5),round(c**2*A(r_c),5),round(d**2*A(r_d),5)]
 
 titles=["a","b(2+cos(t))","c(2+cos(5t))","d(1+t^2(2pi-t)^2)"]
 labels=["a="+str(round(a,5))+"\nL(r)=1"+"\nA(r)="+str(As[0]), "b="+str(round(b,5))+"\nL(r)=1"+"\nA(r)="+str(As[1]), "c="+str(round(c,5))+"\nL(r)=1"+"\nA(r)="+str(As[2]), "d="+str(round(d,5))+"\nL(r)=1"+"\nA(r)="+str(As[3])]
 
 
-
+#affichage
 for i in range(4):
     axs[i].plot(X,Ys[i],label=labels[i])
     axs[i].set_title("r(t)=" + titles[i])
@@ -93,4 +89,6 @@ for i in range(4):
     axs[i].set_yticks(np.array([0, 0.1, 0.2, 0.3]))
 axs[-1].set_xlabel("t")
 plt.subplots_adjust(hspace=0.5)
+
+#sauvegarde
 plt.savefig(".\out\courbe_fermee_obtimale_1.pdf")
