@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.15)  16 NOV 2019 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.15)  1 DEC 2019 17:31
 entering extended mode
 **./Reponse.tex
 (Reponse.tex
@@ -788,28 +788,32 @@ File: pgflibraryarrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 File: tikzlibrarybackgrounds.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 \pgf@layerbox@background=\box41
 \pgf@layerboxsaved@background=\box42
+)
+("C:\Users\Dell\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer
+/tikz/libraries\tikzlibrarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ) (Reponse.aux)
 \openout1 = `Reponse.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Info: Redefining \degres on input line 28.
-LaTeX Info: Redefining \dots on input line 28.
-LaTeX Info: Redefining \up on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Info: Redefining \degres on input line 29.
+LaTeX Info: Redefining \dots on input line 29.
+LaTeX Info: Redefining \up on input line 29.
 \AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 29.
 
 ("C:\Users\Dell\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.st
 y"
@@ -821,9 +825,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count149
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
  (Reponse.out) (Reponse.out)
 \@outlinefile=\write4
 \openout4 = `Reponse.out'.
@@ -863,18 +867,18 @@ G,.JBIG2,.JB2,.eps]
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.15).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
 
 ("C:\Users\Dell\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
 
 
 ("C:\Users\Dell\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 69
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 70
 .
 
 ("C:\Users\Dell\AppData\Local\Programs\MiKTeX 2.9\tex/latex/jknappen\ursfs.fd"
@@ -882,9 +886,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {C:/Users/Dell/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+(Reponse.toc)
 \tf@toc=\write5
 \openout5 = `Reponse.toc'.
 
@@ -892,7 +894,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.106 \part
+l.107 \part
            {Fonctions de plusieurs variables} [1
 
 ] [2
@@ -900,109 +902,104 @@ l.106 \part
 ]
 Cas 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--122
+Underfull \hbox (badness 10000) in paragraph at lines 119--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
+Underfull \hbox (badness 10000) in paragraph at lines 125--127
 
  []
 
 [3
 
-]
-
-LaTeX Warning: Reference `eq:11' on page 4 undefined on input line 160.
-
-
-LaTeX Warning: Reference `eq:13' on page 4 undefined on input line 165.
-
-
-LaTeX Warning: Reference `eq:11' on page 4 undefined on input line 176.
-
-[4
+] [4
 
 ] [5]
 Cas 2.
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
+Underfull \hbox (badness 10000) in paragraph at lines 212--215
 
  []
 
 
-Overfull \hbox (45.66928pt too wide) detected at line 230
+Overfull \hbox (45.66928pt too wide) detected at line 231
 []
  []
-
-
-LaTeX Warning: Reference `eq:21' on page 7 undefined on input line 231.
-
-
-LaTeX Warning: Reference `eq:23' on page 7 undefined on input line 235.
 
 [7] [8]
 Cas 3.
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
 
  []
 
-[10] [11] [12] [13
+[10] [11]
+Overfull \hbox (48.42899pt too wide) in paragraph at lines 403--406
+\T1/cmr/m/n/12 de de-gré 2) que les co-or-don-nées de D se-ront (3.3,-1.1). $[]
+ [] \OML/cmm/m/it/12 dx \OMS/cmsy/m/n/12  
+ []
+
+[12] [13
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
+Cas 4.
+
+Overfull \hbox (0.27008pt too wide) in paragraph at lines 416--418
+[]\T1/cmr/m/n/12 On peut se don-ner une idée du pro-blème en consi-dé-rant plu-
+sieurs exemples
+ []
+
+[14
+
+] [15] [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 999.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 999.
  (Reponse.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 999.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 999.
 Package rerunfilecheck Info: File `Reponse.out' has not changed.
-(rerunfilecheck)             Checksum: EDE4196EECF90BF3B1C627E643D39F3A;586.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 412.
+(rerunfilecheck)             Checksum: AFEC41451D5E18C07353F7AC583025E0;759.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 999.
  ) 
 Here is how much of TeX's memory you used:
- 29072 strings out of 492452
- 699020 string characters out of 3120530
- 910476 words of memory out of 3000000
- 32936 multiletter control sequences out of 15000+200000
- 18331 words of font info for 48 fonts, out of 3000000 for 9000
+ 29200 strings out of 492452
+ 701523 string characters out of 3120530
+ 1029503 words of memory out of 3000000
+ 33045 multiletter control sequences out of 15000+200000
+ 19871 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,20n,119p,731b,2217s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
-cbx1200.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecbx1728.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jk
-nappen/ec/dpi600\ecrm1200.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\
-fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\Dell\AppData\Local\Mi
-KTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\Dell\AppData
-\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Del
-l\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\
-Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074
-.pk><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmex10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Dell/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Dell/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Dell/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users
-/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb>
-Output written on Reponse.pdf (14 pages, 205363 bytes).
+cbx1728.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecrm1200.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jk
+nappen/ec/dpi600\ecbx1200.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\
+fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\Dell\AppData\Local\Mi
+KTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Dell\AppData
+\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\Del
+l\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\
+Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488
+.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
+\eccc1728.pk> <C:\Users\Dell\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\eccc2074.pk><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Dell/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Dell/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/D
+ell/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Reponse.pdf (17 pages, 238201 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 515 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

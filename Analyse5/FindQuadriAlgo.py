@@ -2,6 +2,7 @@ import math
 from sympy import *
 import matplotlib.pyplot as plt
 import tikzplotlib
+import numpy as np
 #On travaille sur R2, on commence par initialiser notre coté qui est égal à 1.
 
 #Norme euclidienne
@@ -69,7 +70,44 @@ def TrouveQuadri(segL1,cote):
     return solution
 
 
+# Question 1
+def integrale(f, a, b, n=10 ** 6):
+    X = np.linspace(a, b, n)
+    Y = f(X)
+    S = np.sum(Y[1:-1]) + (Y[0] + Y[-1]) / 2
+    S = S * (b - a) / n
+    return S
 
-print(list(TrouveTriangle([(1,1),(2,1)],3)))
+
+def derivee(f, xo, dt=10 ** -6):
+    return (f(xo + dt) - f(xo - dt)) / (2 * dt)
+
+
+def F(f):
+    def f_longueur(x):
+        return np.sqrt(1 + derivee(f, x) ** 2)
+
+    return integrale(f_longueur, -1, 1)
+
+
+def G(f):
+    return integrale(f, -1, 1)
+
+
+# Question 2
+
+def fonction_1(x):
+    return np.sqrt(1-x**2)
+
+X = np.linspace(-1, 1, 50)
+
+plt.figure()
+F1 = F(fonction_1)
+G1 = G(fonction_1)
+plt.plot(X,fonction_1(X))
+plt.axis("equal")
+plt.grid(True)
+tikzplotlib.save("test.tex")
+plt.show()
 
 

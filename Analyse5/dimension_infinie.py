@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot  as plt
 import os
-
+import tikzplotlib
 
 # Question 1
 def integrale(f, a, b, n=10 ** 6):
