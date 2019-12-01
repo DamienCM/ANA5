@@ -28,6 +28,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -42,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.FindQuadriAlgo">
+  <component name="RunManager" selected="Python.courbe fermee optimale">
     <configuration name="FindQuadriAlgo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ANA5" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,6 +78,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Analyse5/Triangle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="courbe fermee optimale" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ANA5" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Analyse5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Analyse5/courbe fermee optimale.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -129,6 +151,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.courbe fermee optimale" />
         <item itemvalue="Python.FindQuadriAlgo" />
         <item itemvalue="Python.default" />
         <item itemvalue="Python.dimension_infinie" />
@@ -180,5 +203,21 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Analyse5/courbe fermee optimale.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Analyse5/courbe fermee optimale.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
